@@ -1,0 +1,53 @@
+@import "nullstyle.scss";
+@import "fonts.scss";
+@import "mixins.scss";
+
+//
+$fontFamily: "Poppins";
+
+$mainColor: #222220;
+$titleColor: #b5b7c0;
+$sideColor: #9197b3;
+$greenColor: #008767;
+$redColor: #df0404;
+
+//
+$fontSize: 14px;
+//
+$containerWidth: 1054px;
+
+//md query
+// $pc: $containerWidth + $containerPadding;
+$tablet: 991.98px;
+$mobile: 767.98px;
+$mobileSmall: 479.98px;
+body {
+  font-family: $fontFamily;
+  color: $mainColor;
+  .lock & {
+    overflow: hidden;
+    touch-action: none;
+    overscroll-behavior: none;
+  }
+}
+//footer to the bottom
+main {
+  margin-left: 306px;
+  @media (max-width: 1150px) {
+    margin-left: 190px;
+  }
+  @media (max-width: $tablet) {
+    margin-left: 0;
+  }
+}
+//slider fix
+// > * {
+//    min-width: 0;
+// }
+[class*="__container"] {
+  max-width: $containerWidth;
+  padding-left: 71px;
+  padding-right: 15px;
+}
+@import "./dashboard/dashboard.scss";
+@import "./sidebar/sidebar.scss";

@@ -1,5 +1,5 @@
 .dashboard {
-  padding-top: toRem(41);
+  padding-top: 41px;
   &__container {
   }
 
@@ -7,23 +7,23 @@
     color: #000;
     font-weight: 500;
     font-size: 24px;
-    margin-bottom: toRem(51);
+    margin-bottom: 51px;
   }
   &__body {
     background-color: #fff;
-    border-radius: toRem(20);
+    border-radius: 20px;
     filter: drop-shadow(0px 10px 60px rgba(226, 236, 249, 0.5));
   }
   &__content {
   }
 
   &__header {
-    padding: toRem(38) toRem(38) toRem(0) toRem(38);
+    padding: 38px 38px 0px 38px;
     @media (max-width: 1150px) {
-      padding: toRem(20) toRem(20) toRem(0) toRem(20);
+      padding: 20px 20px 0px 20px;
     }
     @media (max-width: $mobileSmall) {
-      padding: toRem(10) toRem(10) toRem(0) toRem(10);
+      padding: 10px 10px 0px 10px;
     }
   }
 
@@ -32,11 +32,12 @@
   &__footer {
     display: flex;
     justify-content: space-between;
-    padding: toRem(32) toRem(38) toRem(41) toRem(38);
+    padding: 32px 38px 41px 38px;
     @media (max-width: $mobile) {
       flex-direction: column;
       align-items: center;
-      gap: toRem(15);
+      gap: 15px;
+      padding: 16px 19px 20px 19px;
     }
   }
 
@@ -66,7 +67,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: toRem(10);
+    gap: 10px;
   }
   &__body {
   }
@@ -115,10 +116,10 @@
   }
   &__input {
     width: 100%;
-    border-radius: toRem(10);
+    border-radius: 10px;
     background-color: #f9fbff;
-    padding-left: toRem(40);
-    padding-right: toRem(10);
+    padding-left: 40px;
+    padding-right: 10px;
     color: $titleColor;
     font-size: 12px;
     line-height: normal;
@@ -137,23 +138,23 @@
 }
 .table-dashboard {
   &__block {
-    padding: toRem(0) toRem(38);
+    padding: 0px 38px;
     @media (max-width: 1150px) {
-      padding: toRem(0) toRem(19);
+      padding: 0px 19px;
     }
     @media (max-width: $mobileSmall) {
-      padding: toRem(0) toRem(10);
+      padding: 0px 10px;
     }
   }
   &__row {
     display: grid;
     grid-template-columns: 15.495% 12.495% 17.495% 23.66% 15.495% 10.26%;
     border-bottom: 1px solid #eee;
-    padding: toRem(24) toRem(0);
+    padding: 24px 0px;
     color: $mainColor;
     letter-spacing: -0.14px;
     font-weight: 500;
-    gap: toRem(10);
+    gap: 10px;
     @media (max-width: $tablet) {
       grid-template-columns: 1.5fr 1fr 1fr;
     }
@@ -161,35 +162,35 @@
       grid-template-columns: 50% 50%;
     }
     @media (max-width: $mobileSmall) {
-      row-gap: toRem(10);
-      column-gap: toRem(2);
+      row-gap: 10px;
+      column-gap: 2px;
       word-wrap: break-word;
     }
   }
 
   &__row--caption {
     display: grid;
-    gap: toRem(10);
+    gap: 10px;
     grid-template-columns: 15.495% 12.495% 17.495% 23.66% 15.495% 10.26%;
-    padding: toRem(0) toRem(38);
+    padding: 0px 38px;
     border-bottom: 1px solid #eee;
-    padding-bottom: toRem(14);
+    padding-bottom: 14px;
     color: $titleColor;
     @media (max-width: 1150px) {
-      padding: toRem(0) toRem(19);
-      padding-bottom: toRem(14);
+      padding: 0px 19px;
+      padding-bottom: 14px;
     }
     @media (max-width: $tablet) {
       grid-template-columns: 1.5fr 1fr 1fr;
     }
     @media (max-width: 530px) {
       grid-template-columns: 50% 50%;
-      padding: toRem(0) toRem(18);
-      padding-bottom: toRem(14);
+      padding: 0px 18px;
+      padding-bottom: 14px;
     }
     @media (max-width: $mobileSmall) {
-      row-gap: toRem(10);
-      column-gap: toRem(2);
+      row-gap: 10px;
+      column-gap: 2px;
     }
     &._active {
       .table-dashboard__arrow {
@@ -239,21 +240,20 @@
 
   &__status {
     justify-self: center;
+    border-radius: 4px;
     &--active {
       justify-self: end;
       color: $greenColor;
-      border-radius: toRem(4);
       border: 1px solid $greenColor;
       background: rgba(22, 192, 152, 0.38);
-      padding: toRem(4) toRem(18);
+      padding: 4px 18px;
     }
     &--inactive {
       justify-self: end;
-      border-radius: toRem(4);
       color: $redColor;
       border: 1px solid $redColor;
       background-color: #ffc5c5;
-      padding: toRem(4) toRem(18);
+      padding: 4px 18px;
     }
     @media (max-width: $tablet) {
       justify-self: start;
@@ -301,7 +301,7 @@
     align-items: center;
     justify-content: center;
     color: #404b52;
-    font-size: toRem(12);
+    font-size: 12px;
     font-weight: 500;
     letter-spacing: -0.12px;
     &--next {
@@ -348,7 +348,7 @@
     }
   }
   &__dots {
-    padding: toRem(3) toRem(3);
+    padding: 3px 3px;
     cursor: pointer;
     align-self: end;
   }

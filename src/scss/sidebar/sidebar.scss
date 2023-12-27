@@ -16,10 +16,10 @@
     display: flex;
     min-height: 100%;
     flex-direction: column;
-    padding-top: toRem(36);
-    padding-bottom: toRem(76);
-    padding-left: toRem(28);
-    padding-right: toRem(28);
+    padding-top: 36px;
+    padding-bottom: 78px;
+    padding-left: 28px;
+    padding-right: 28px;
   }
   &__logo {
     display: flex;
@@ -67,11 +67,11 @@
 
   &__list {
     flex: 1 1 auto;
-    padding-bottom: toRem(20);
+    padding-bottom: 20px;
     display: flex;
     transition: all 0.3s ease 0s;
     flex-direction: column;
-    gap: toRem(18);
+    gap: 18px;
     @media (max-width: $tablet) {
       transform: translate(-40px, 0px);
       opacity: 0;
@@ -87,18 +87,18 @@
     }
   }
   @media (max-width: 1150px) {
-    width: toRem(190);
+    width: 190px;
     &__items {
-      padding-top: toRem(24);
-      padding-bottom: toRem(76);
-      padding-left: toRem(10);
-      padding-right: toRem(10);
+      padding-top: 24px;
+      padding-bottom: 60px;
+      padding-left: 10px;
+      padding-right: 10px;
     }
     &__logo {
       &-text {
-        font-size: toRem(16);
+        font-size: 16px;
         span {
-          font-size: toRem(10);
+          font-size: 10px;
         }
       }
     }
@@ -107,12 +107,12 @@
     z-index: 5;
     overflow: hidden;
     width: 40px;
-    &__items {
-      padding-top: toRem(50);
-    }
+    // &__items {
+    //   padding-top: 50px;
+    // }
   }
   &.active {
-    width: toRem(190);
+    width: 190px;
     overflow: auto;
     .sidebar__logo,
     .sidebar__list,
@@ -131,8 +131,8 @@
     border-radius: toRem(8);
     display: flex;
     align-items: center;
-    gap: toRem(14);
-    padding: toRem(12) toRem(0) toRem(12) toRem(12);
+    gap: 14px;
+    padding: 12px 0 12px 12px;
     &::after {
       content: "";
       position: absolute;
@@ -234,7 +234,7 @@
 .user-sidebar {
   display: flex;
   align-items: center;
-  gap: toRem(12);
+  gap: 12px;
   &__image {
   }
 
