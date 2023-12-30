@@ -2,16 +2,14 @@
 <html lang="en">
   @@include('html/head.html',{ "title":"Dashboard" })
   <body>
-    <aside class="sidebar">
-      <div class="sidebar__items">
-        <div class="sidebar__header">
-          <div class="sidebar__logo">
+    <nav class="nav">
+      <div class="nav__items">
+        <div class="nav__header">
+          <div class="nav__logo">
             <img src="@img/logo.svg" alt="logo" />
-            <a href="#" class="sidebar__logo-text"
-              >Dashboard<span>v.01</span></a
-            >
+            <a href="#" class="nav__logo-text">Dashboard<span>v.01</span></a>
           </div>
-          <div class="sidebar__button">
+          <div class="nav__button">
             <svg
               class="icon"
               xmlns="http://www.w3.org/2000/svg"
@@ -27,9 +25,9 @@
             </svg>
           </div>
         </div>
-        <ul class="sidebar__list list-sidebar">
-          <li class="list-sidebar__item">
-            <div class="list-sidebar__image">
+        <ul class="nav__list list-nav">
+          <li class="list-nav__item">
+            <div class="list-nav__image">
               <svg
                 width="24"
                 height="24"
@@ -69,10 +67,10 @@
                 />
               </svg>
             </div>
-            <h4 class="list-sidebar__link">Dashboard</h4>
+            <h4 class="list-nav__link">Dashboard</h4>
           </li>
-          <li class="list-sidebar__item">
-            <div class="list-sidebar__image">
+          <li class="list-nav__item">
+            <div class="list-nav__image">
               <svg
                 width="24"
                 height="24"
@@ -98,10 +96,10 @@
                 />
               </svg>
             </div>
-            <h4 class="list-sidebar__link">Product</h4>
+            <h4 class="list-nav__link">Product</h4>
           </li>
-          <li class="list-sidebar__item active">
-            <div class="list-sidebar__image">
+          <li class="list-nav__item active">
+            <div class="list-nav__image">
               <svg
                 width="24"
                 height="24"
@@ -126,10 +124,10 @@
                 />
               </svg>
             </div>
-            <h4 class="list-sidebar__link">Customers</h4>
+            <h4 class="list-nav__link">Customers</h4>
           </li>
-          <li class="list-sidebar__item">
-            <div class="list-sidebar__image">
+          <li class="list-nav__item">
+            <div class="list-nav__image">
               <svg
                 width="24"
                 height="24"
@@ -174,10 +172,10 @@
                 />
               </svg>
             </div>
-            <h4 class="list-sidebar__link">Income</h4>
+            <h4 class="list-nav__link">Income</h4>
           </li>
-          <li class="list-sidebar__item">
-            <div class="list-sidebar__image">
+          <li class="list-nav__item">
+            <div class="list-nav__image">
               <svg
                 width="24"
                 height="24"
@@ -203,10 +201,10 @@
                 />
               </svg>
             </div>
-            <h4 class="list-sidebar__link">Promote</h4>
+            <h4 class="list-nav__link">Promote</h4>
           </li>
-          <li class="list-sidebar__item">
-            <div class="list-sidebar__image">
+          <li class="list-nav__item">
+            <div class="list-nav__image">
               <svg
                 width="24"
                 height="24"
@@ -228,22 +226,22 @@
                 />
               </svg>
             </div>
-            <h4 class="list-sidebar__link">Help</h4>
+            <h4 class="list-nav__link">Help</h4>
           </li>
         </ul>
-        <div class="sidebar__user user-sidebar">
-          <div class="user-sidebar__image">
+        <div class="nav__user user-nav">
+          <div class="user-nav__image">
             <img src="@img/sidebar/user-face.svg" alt="user_name" />
           </div>
-          <div class="user-sidebar__body">
-            <div class="user-sidebar__name">Evano</div>
-            <div class="user-sidebar__rank">Project Manager</div>
+          <div class="user-nav__body">
+            <div class="user-nav__name">Evano</div>
+            <div class="user-nav__rank">Project Manager</div>
           </div>
         </div>
       </div>
-    </aside>
+    </nav>
     <main>
-      <div class="dashboard">
+      <section class="dashboard">
         <div class="dashboard__container">
           <h1 class="dashboard__greetings">Hello Evano 👋🏼,</h1>
           <div class="dashboard__body">
@@ -470,7 +468,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </main>
     <script src="js/app.min.js"></script>
   </body>

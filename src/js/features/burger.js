@@ -1,5 +1,5 @@
-const iconSideBar = document.querySelector(".sidebar__button");
-const sideBar = document.querySelector(".sidebar");
+const iconSideBar = document.querySelector(".nav__button");
+const sideBar = document.querySelector(".nav");
 export const openMenu = () => {
   if (iconSideBar) {
     iconSideBar.addEventListener("click", () => {

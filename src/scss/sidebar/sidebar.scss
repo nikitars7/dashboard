@@ -1,4 +1,4 @@
-.sidebar {
+.nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -114,16 +114,16 @@
   &.active {
     width: 190px;
     overflow: auto;
-    .sidebar__logo,
-    .sidebar__list,
-    .sidebar__user {
+    .nav__logo,
+    .nav__list,
+    .nav__user {
       transform: translate(0px, 0px);
       opacity: 1;
       visibility: visible;
     }
   }
 }
-.list-sidebar {
+.list-nav {
   &__item {
     position: relative;
     z-index: 5;
@@ -172,13 +172,13 @@
         transform: translateX(0px);
         opacity: 1;
       }
-      .list-sidebar__link {
+      .list-nav__link {
         color: #fff;
       }
       &::after {
         background: url("../img/sidebar/arrow-white.svg") right no-repeat;
       }
-      .list-sidebar__image {
+      .list-nav__image {
         svg {
           path {
             fill: #fff;
@@ -190,7 +190,7 @@
       &:hover,
       &.active {
         &:nth-child(3) {
-          .list-sidebar__image {
+          .list-nav__image {
             svg {
               path {
                 fill: none;
@@ -202,13 +202,13 @@
           transform: translateX(0px);
           opacity: 1;
         }
-        .list-sidebar__link {
+        .list-nav__link {
           color: #fff;
         }
         &::after {
           background: url("../img/sidebar/arrow-white.svg") right no-repeat;
         }
-        .list-sidebar__image {
+        .list-nav__image {
           svg {
             path {
               fill: #fff;
@@ -231,7 +231,7 @@
   }
 }
 
-.user-sidebar {
+.user-nav {
   display: flex;
   align-items: center;
   gap: 12px;
