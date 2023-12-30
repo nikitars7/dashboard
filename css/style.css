@@ -108,6 +108,12 @@ main {
 
 .dashboard {
   padding-top: 41px;
+  padding-bottom: 258px;
+}
+@media (max-width: 1430px) {
+  .dashboard {
+    padding-bottom: calc(50px + 208 * (100vw - 320px) / 1110);
+  }
 }
 .dashboard__greetings {
   color: #000;
@@ -464,7 +470,7 @@ main {
   align-self: end;
 }
 
-.sidebar {
+.nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -475,11 +481,11 @@ main {
   background-color: #fff;
   box-shadow: 0px 10px 60px 0px rgba(226, 236, 249, 0.5);
 }
-.sidebar__header {
+.nav__header {
   position: relative;
   margin-bottom: 4.0625rem;
 }
-.sidebar__items {
+.nav__items {
   display: flex;
   min-height: 100%;
   flex-direction: column;
@@ -488,25 +494,25 @@ main {
   padding-left: 28px;
   padding-right: 28px;
 }
-.sidebar__logo {
+.nav__logo {
   display: flex;
   align-items: center;
   gap: 0.1875rem;
   transition: all 0.3s ease 0s;
 }
 @media (max-width: 1150px) {
-  .sidebar__logo img {
+  .nav__logo img {
     width: 25px;
     height: 25px;
   }
 }
-.sidebar__logo-text {
+.nav__logo-text {
   font-weight: 600;
   font-size: 26px;
   letter-spacing: 0.01625rem;
   color: #000;
 }
-.sidebar__logo-text span {
+.nav__logo-text span {
   font-size: 10px;
   color: #838383;
   font-weight: 500;
@@ -514,13 +520,13 @@ main {
   margin-left: 0.25rem;
 }
 @media (max-width: 991.98px) {
-  .sidebar__logo {
+  .nav__logo {
     transform: translate(-40px, 0px);
     opacity: 0;
     visibility: hidden;
   }
 }
-.sidebar__button {
+.nav__button {
   position: absolute;
   display: none;
   flex: 0 1 20px;
@@ -531,11 +537,11 @@ main {
   transform: translate(-100%, -50%);
 }
 @media (max-width: 991.98px) {
-  .sidebar__button {
+  .nav__button {
     display: block;
   }
 }
-.sidebar__list {
+.nav__list {
   flex: 1 1 auto;
   padding-bottom: 20px;
   display: flex;
@@ -544,59 +550,59 @@ main {
   gap: 18px;
 }
 @media (max-width: 991.98px) {
-  .sidebar__list {
+  .nav__list {
     transform: translate(-40px, 0px);
     opacity: 0;
     visibility: hidden;
   }
 }
-.sidebar__user {
+.nav__user {
   transition: all 0.3s ease 0s;
 }
 @media (max-width: 991.98px) {
-  .sidebar__user {
+  .nav__user {
     transform: translate(-40px, 0px);
     opacity: 0;
     visibility: hidden;
   }
 }
 @media (max-width: 1150px) {
-  .sidebar {
+  .nav {
     width: 190px;
   }
-  .sidebar__items {
+  .nav__items {
     padding-top: 24px;
     padding-bottom: 60px;
     padding-left: 10px;
     padding-right: 10px;
   }
-  .sidebar__logo-text {
+  .nav__logo-text {
     font-size: 16px;
   }
-  .sidebar__logo-text span {
+  .nav__logo-text span {
     font-size: 10px;
   }
 }
 @media (max-width: 991.98px) {
-  .sidebar {
+  .nav {
     z-index: 5;
     overflow: hidden;
     width: 40px;
   }
 }
-.sidebar.active {
+.nav.active {
   width: 190px;
   overflow: auto;
 }
-.sidebar.active .sidebar__logo,
-.sidebar.active .sidebar__list,
-.sidebar.active .sidebar__user {
+.nav.active .nav__logo,
+.nav.active .nav__list,
+.nav.active .nav__user {
   transform: translate(0px, 0px);
   opacity: 1;
   visibility: visible;
 }
 
-.list-sidebar__item {
+.list-nav__item {
   position: relative;
   z-index: 5;
   cursor: pointer;
@@ -606,7 +612,7 @@ main {
   gap: 14px;
   padding: 12px 0 12px 12px;
 }
-.list-sidebar__item::after {
+.list-nav__item::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -616,7 +622,7 @@ main {
   height: 16px;
   background: url("../img/sidebar/arrow.svg") right no-repeat;
 }
-.list-sidebar__item::before {
+.list-nav__item::before {
   content: "";
   display: block;
   width: 100%;
@@ -631,67 +637,67 @@ main {
   transition: all 0.2s linear;
   border-radius: 0.5rem;
 }
-.list-sidebar__item.active:nth-child(3) .list-sidebar__image svg path {
+.list-nav__item.active:nth-child(3) .list-nav__image svg path {
   fill: none;
 }
-.list-sidebar__item.active::before {
+.list-nav__item.active::before {
   transform: translateX(0px);
   opacity: 1;
 }
-.list-sidebar__item.active .list-sidebar__link {
+.list-nav__item.active .list-nav__link {
   color: #fff;
 }
-.list-sidebar__item.active::after {
+.list-nav__item.active::after {
   background: url("../img/sidebar/arrow-white.svg") right no-repeat;
 }
-.list-sidebar__item.active .list-sidebar__image svg path {
+.list-nav__item.active .list-nav__image svg path {
   fill: #fff;
 }
 @media (any-hover: hover) {
-  .list-sidebar__item:hover:nth-child(3) .list-sidebar__image svg path, .list-sidebar__item.active:nth-child(3) .list-sidebar__image svg path {
+  .list-nav__item:hover:nth-child(3) .list-nav__image svg path, .list-nav__item.active:nth-child(3) .list-nav__image svg path {
     fill: none;
   }
-  .list-sidebar__item:hover::before, .list-sidebar__item.active::before {
+  .list-nav__item:hover::before, .list-nav__item.active::before {
     transform: translateX(0px);
     opacity: 1;
   }
-  .list-sidebar__item:hover .list-sidebar__link, .list-sidebar__item.active .list-sidebar__link {
+  .list-nav__item:hover .list-nav__link, .list-nav__item.active .list-nav__link {
     color: #fff;
   }
-  .list-sidebar__item:hover::after, .list-sidebar__item.active::after {
+  .list-nav__item:hover::after, .list-nav__item.active::after {
     background: url("../img/sidebar/arrow-white.svg") right no-repeat;
   }
-  .list-sidebar__item:hover .list-sidebar__image svg path, .list-sidebar__item.active .list-sidebar__image svg path {
+  .list-nav__item:hover .list-nav__image svg path, .list-nav__item.active .list-nav__image svg path {
     fill: #fff;
   }
 }
-.list-sidebar__image {
+.list-nav__image {
   position: relative;
 }
-.list-sidebar__link {
+.list-nav__link {
   position: relative;
   color: #9197b3;
   font-weight: 500;
   letter-spacing: -0.14px;
 }
 
-.user-sidebar {
+.user-nav {
   display: flex;
   align-items: center;
   gap: 12px;
 }
-.user-sidebar__body {
+.user-nav__body {
   flex: 1 1 auto;
 }
-.user-sidebar__name {
+.user-nav__name {
   color: #000;
   font-weight: 500;
   letter-spacing: 0.14px;
 }
-.user-sidebar__name:not(:last-child) {
+.user-nav__name:not(:last-child) {
   margin-bottom: 5px;
 }
-.user-sidebar__rank {
+.user-nav__rank {
   color: #757575;
   font-size: 12px;
   letter-spacing: 0.12px;
