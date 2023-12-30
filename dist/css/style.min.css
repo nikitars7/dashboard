@@ -108,6 +108,12 @@ main {
 
 .dashboard {
   padding-top: 41px;
+  padding-bottom: 258px;
+}
+@media (max-width: 1430px) {
+  .dashboard {
+    padding-bottom: calc(50px + 208 * (100vw - 320px) / 1110);
+  }
 }
 .dashboard__greetings {
   color: #000;

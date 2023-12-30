@@ -1,5 +1,6 @@
 .dashboard {
   padding-top: 41px;
+  @include adaptiv-value("padding-bottom", 258, 50, 1);
   &__container {
   }
 
