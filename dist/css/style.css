@@ -631,7 +631,7 @@ main {
   transition: all 0.2s linear;
   border-radius: 0.5rem;
 }
-.list-nav__item.active:nth-child(3) .list-sidebar__image svg path {
+.list-nav__item.active:nth-child(3) .list-nav__image svg path {
   fill: none;
 }
 .list-nav__item.active::before {
